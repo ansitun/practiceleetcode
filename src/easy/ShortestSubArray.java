@@ -8,7 +8,7 @@ public class ShortestSubArray {
     public int findShortestSubArray(int[] nums) {
 
         HashMap<Integer, Integer[]> map = new HashMap<>();
-        int maxKey = 0, minLen = 0;
+        int maxKey = 0;
 
         for(int i=0; i<nums.length; i++) {
 
