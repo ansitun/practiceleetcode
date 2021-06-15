@@ -1,7 +1,6 @@
-package medium;
+package hard;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class NQueen {
@@ -18,15 +17,11 @@ public class NQueen {
 
     public void totalNQueenHelper(int i, int[][] board, List<List<Integer[]>> result, List<Integer[]> comb) {
         if(i==board.length) {
-            //System.out.println("---------------------");
-            result.add(new ArrayList<>(comb));
-            //printBoard(board);
+            result.add(comb);
             return;
         }
 
         for(int k=0; k< board.length; k++) {
-
-
             if (isValid(i, k, board)) {
                 board[i][k] = 1;
                 comb.add(new Integer[]{i,k});
@@ -74,6 +69,6 @@ public class NQueen {
 
     public static void main(String[] args) {
         NQueen n = new NQueen();
-        System.out.println(n.totalNQueens(16));
+        System.out.println(n.totalNQueens(12));
     }
 }
